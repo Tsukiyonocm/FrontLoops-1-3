@@ -1,0 +1,121 @@
+/** Variables
+ ---------------------------------------------------------*/
+
+:root {
+    --green-back: rgb(22, 160, 133); /* Primary Background Color */
+    --white: rgb(255, 255, 255);
+    --black: rgb(0, 0, 0); /* Primary Text */
+    --light-grey: rgb(172, 172, 172); /* Confirmation Text */
+    --dark-grey: rgb(92, 92, 92); /* Item Text */
+}
+
+/** Reset
+  ---------------------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: var(--black);
+    background-color: var(--green-back);
+    line-height: 1.5;
+    font-size: 1.5rem;
+}
+
+/** ReUse
+ ---------------------------------------------------------*/
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/** Main
+   ---------------------------------------------------------*/
+.wrapper {
+    height: 45rem;
+    width: 60rem;
+    background-color: var(--white);
+    background-image: url(../img/bicycle.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left 18rem;
+    border-radius: 0.5rem;
+}
+
+.content {
+    width: 52rem;
+    height: 37rem;
+    padding: 1rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.customer,
+.item,
+.order_total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.profile_icon {
+    width: 4rem;
+    height: 4rem;
+    padding: 0.4rem;
+    border: 1px solid var(--light-grey);
+    border-radius: 100px;
+    transition: box-shadow .5s;
+}
+
+.profile_icon:hover {
+    box-shadow: 0 0 1px 5px var(--light-grey);
+}
+
+.order_message {
+    color: var(--light-grey);
+    padding: 1rem 0 2rem 0;
+}
+
+.order_details {
+    display: flex;
+    flex-direction: column;
+}
+
+.item_name,
+.item_total {
+    color: var(--dark-grey);
+    font-weight: 700;
+}
+
+.item:nth-of-type(2) {
+    padding: 2rem 0;
+}
+
+.item_price {
+    color: var(--black);
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
